@@ -4,10 +4,15 @@ import 'dart:io';
 
 void main(List<String> arguments) {
   var p1 = Pessoa();
+  print('Digite o nome :');
   var lernome = stdin.readLineSync();
   p1.setNome(lernome);
-  p1.setPeso(65.0);
-  p1.setAltua(0);
+  print('Digite o Peso :');
+  String? lerpeso = stdin.readLineSync();
+  p1.setPeso(double.parse(lerpeso!));
+   print('Digite o Altura :');
+   String? lerAltura = stdin.readLineSync();
+  p1.setAltua(double.parse((lerAltura!)));
   p1.ResultImc();
   print('Hello world: ${calculadora_imc.calculate()}!');
 }
